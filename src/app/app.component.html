@@ -1,0 +1,9 @@
+<h1>{{ title }}</h1>
+
+<p>
+  <button type="button" (click)="update()">Update</button>
+</p>
+
+<ng-container *ngIf="devices$ | async as devices">
+  <div>{{ devices | json }}</div>
+</ng-container>
